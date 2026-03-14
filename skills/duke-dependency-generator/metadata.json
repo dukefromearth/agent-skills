@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "organization": "Duke Engineering",
+  "date": "March 2026",
+  "abstract": "Implementation guide for adding deterministic architecture graph generation to TypeScript repositories. This skill focuses on install-first bootstrap, dependency-cruiser initialization, scope modeling, stable graph output, strict CLI contracts, and repeatability checks.",
+  "references": [
+    "https://github.com/sverweij/dependency-cruiser",
+    "https://ts-morph.com/",
+    "https://github.com/mrmlnc/fast-glob",
+    "https://www.typescriptlang.org/tsconfig/"
+  ]
+}

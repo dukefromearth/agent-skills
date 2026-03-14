@@ -1,0 +1,185 @@
+import { readFile } from 'fs/promises'
+import { basename } from 'path'
+import { Rule, ImpactLevel } from './types.js'
+
+export interface RuleFile {
+  section: number
+  subsection?: number
+  rule: Rule
+}
+
+export async function parseRuleFile(
+  filePath: string,
+  sectionMap: Record<string, number>
+): Promise<RuleFile> {
+  const rawContent = await readFile(filePath, 'utf-8')
+  const content = rawContent.replace(/\r\n/g, '\n')
+
+  let frontmatter: Record<string, string> = {}
+  let contentStart = 0
+
+  if (content.startsWith('---')) {
+    const frontmatterEnd = content.indexOf('---', 3)
+    if (frontmatterEnd !== -1) {
+      const frontmatterText = content.slice(3, frontmatterEnd).trim()
+      frontmatterText.split('\n').forEach((line) => {
+        const [key, ...valueParts] = line.split(':')
+        if (!key || valueParts.length === 0) {
+          return
+        }
+        const value = valueParts.join(':').trim()
+        frontmatter[key.trim()] = value.replace(/^['"]|['"]$/g, '')
+      })
+      contentStart = frontmatterEnd + 3
+    }
+  }
+
+  const ruleLines = content.slice(contentStart).trim().split('\n')
+  let title = ''
+  let titleLine = 0
+
+  for (let i = 0; i < ruleLines.length; i++) {
+    if (ruleLines[i].startsWith('##')) {
+      title = ruleLines[i].replace(/^##+\s*/, '').trim()
+      titleLine = i
+      break
+    }
+  }
+
+  let impact: Rule['impact'] = 'MEDIUM'
+  let impactDescription = ''
+  let explanation = ''
+  let references: string[] = []
+  const examples: Rule['examples'] = []
+
+  let currentExample: Rule['examples'][number] | null = null
+  let inCodeBlock = false
+  let codeBlockLanguage = 'typescript'
+  let codeBlockContent: string[] = []
+  let afterCodeBlock = false
+  let additionalText: string[] = []
+  let hasCodeBlockForCurrentExample = false
+
+  for (let i = titleLine + 1; i < ruleLines.length; i++) {
+    const line = ruleLines[i]
+
+    if (line.includes('**Impact:')) {
+      const match = line.match(/\*\*Impact:\s*(\w+(?:-\w+)?)\s*(?:\(([^)]+)\))?/i)
+      if (match) {
+        impact = match[1].toUpperCase().replace(/-/g, '-') as ImpactLevel
+        impactDescription = match[2] ?? ''
+      }
+      continue
+    }
+
+    if (line.startsWith('```')) {
+      if (inCodeBlock) {
+        if (currentExample) {
+          currentExample.code = codeBlockContent.join('\n')
+          currentExample.language = codeBlockLanguage
+        }
+        inCodeBlock = false
+        codeBlockContent = []
+        afterCodeBlock = true
+      } else {
+        inCodeBlock = true
+        hasCodeBlockForCurrentExample = true
+        codeBlockLanguage = line.slice(3).trim() || 'typescript'
+        codeBlockContent = []
+        afterCodeBlock = false
+      }
+      continue
+    }
+
+    if (inCodeBlock) {
+      codeBlockContent.push(line)
+      continue
+    }
+
+    const labelMatch = line.match(/^\*\*([^:]+?):\*?\*?$/)
+    if (labelMatch) {
+      if (currentExample) {
+        if (additionalText.length > 0) {
+          currentExample.additionalText = additionalText.join('\n\n')
+          additionalText = []
+        }
+        examples.push(currentExample)
+      }
+
+      const fullLabel = labelMatch[1].trim()
+      const descMatch = fullLabel.match(/^([A-Za-z]+(?:\s+[A-Za-z]+)*)\s*\(([^()]+)\)$/)
+      currentExample = {
+        label: descMatch ? descMatch[1].trim() : fullLabel,
+        description: descMatch ? descMatch[2].trim() : undefined,
+        code: '',
+        language: codeBlockLanguage
+      }
+      afterCodeBlock = false
+      hasCodeBlockForCurrentExample = false
+      continue
+    }
+
+    if (line.startsWith('Reference:') || line.startsWith('References:')) {
+      if (currentExample) {
+        if (additionalText.length > 0) {
+          currentExample.additionalText = additionalText.join('\n\n')
+          additionalText = []
+        }
+        examples.push(currentExample)
+        currentExample = null
+      }
+
+      const refMatch = line.match(/\[([^\]]+)\]\(([^)]+)\)/g)
+      if (refMatch) {
+        references = refMatch.map((ref) => {
+          const m = ref.match(/\[([^\]]+)\]\(([^)]+)\)/)
+          return m ? m[2] : ref
+        })
+      }
+      continue
+    }
+
+    if (line.trim() && !line.startsWith('#')) {
+      if (!currentExample) {
+        explanation += (explanation ? '\n\n' : '') + line
+      } else if (afterCodeBlock || !hasCodeBlockForCurrentExample) {
+        additionalText.push(line)
+      }
+    }
+  }
+
+  if (currentExample) {
+    if (additionalText.length > 0) {
+      currentExample.additionalText = additionalText.join('\n\n')
+    }
+    examples.push(currentExample)
+  }
+
+  const filename = basename(filePath)
+  const filenameParts = filename.replace('.md', '').split('-')
+
+  let section = 0
+  for (let len = filenameParts.length; len > 0; len--) {
+    const prefix = filenameParts.slice(0, len).join('-')
+    if (sectionMap[prefix] !== undefined) {
+      section = sectionMap[prefix]
+      break
+    }
+  }
+
+  const rule: Rule = {
+    id: '',
+    title: frontmatter.title || title,
+    section,
+    impact: (frontmatter.impact as ImpactLevel) || impact,
+    impactDescription: frontmatter.impactDescription || impactDescription,
+    explanation: explanation.trim(),
+    examples,
+    references,
+    tags: frontmatter.tags
+      ? frontmatter.tags.split(',').map((tag) => tag.trim())
+      : undefined
+  }
+
+  return { section, subsection: 0, rule }
+}
