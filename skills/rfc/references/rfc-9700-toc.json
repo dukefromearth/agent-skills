@@ -1,0 +1,727 @@
+{
+  "rfc": "9700",
+  "source_url": "https://datatracker.ietf.org/doc/html/rfc9700",
+  "generated_at_utc": "2026-03-22T17:53:54Z",
+  "entries": [
+    {
+      "order": 1,
+      "depth": 1,
+      "section": "1",
+      "title": "Introduction",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-1",
+      "section_anchor": "section-1",
+      "name_anchor": "name-introduction"
+    },
+    {
+      "order": 2,
+      "depth": 2,
+      "section": "1.1",
+      "title": "Structure",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-1.1",
+      "section_anchor": "section-1.1",
+      "name_anchor": "name-structure"
+    },
+    {
+      "order": 3,
+      "depth": 2,
+      "section": "1.2",
+      "title": "Conventions and Terminology",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-1.2",
+      "section_anchor": "section-1.2",
+      "name_anchor": "name-conventions-and-terminology"
+    },
+    {
+      "order": 4,
+      "depth": 1,
+      "section": "2",
+      "title": "Best Practices",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2",
+      "section_anchor": "section-2",
+      "name_anchor": "name-best-practices"
+    },
+    {
+      "order": 5,
+      "depth": 2,
+      "section": "2.1",
+      "title": "Protecting Redirect-Based Flows",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.1",
+      "section_anchor": "section-2.1",
+      "name_anchor": "name-protecting-redirect-based-f"
+    },
+    {
+      "order": 6,
+      "depth": 3,
+      "section": "2.1.1",
+      "title": "Authorization Code Grant",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.1.1",
+      "section_anchor": "section-2.1.1",
+      "name_anchor": "name-authorization-code-grant"
+    },
+    {
+      "order": 7,
+      "depth": 3,
+      "section": "2.1.2",
+      "title": "Implicit Grant",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.1.2",
+      "section_anchor": "section-2.1.2",
+      "name_anchor": "name-implicit-grant"
+    },
+    {
+      "order": 8,
+      "depth": 2,
+      "section": "2.2",
+      "title": "Token Replay Prevention",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.2",
+      "section_anchor": "section-2.2",
+      "name_anchor": "name-token-replay-prevention"
+    },
+    {
+      "order": 9,
+      "depth": 3,
+      "section": "2.2.1",
+      "title": "Access Tokens",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.2.1",
+      "section_anchor": "section-2.2.1",
+      "name_anchor": "name-access-tokens"
+    },
+    {
+      "order": 10,
+      "depth": 3,
+      "section": "2.2.2",
+      "title": "Refresh Tokens",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.2.2",
+      "section_anchor": "section-2.2.2",
+      "name_anchor": "name-refresh-tokens"
+    },
+    {
+      "order": 11,
+      "depth": 2,
+      "section": "2.3",
+      "title": "Access Token Privilege Restriction",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.3",
+      "section_anchor": "section-2.3",
+      "name_anchor": "name-access-token-privilege-rest"
+    },
+    {
+      "order": 12,
+      "depth": 2,
+      "section": "2.4",
+      "title": "Resource Owner Password Credentials Grant",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.4",
+      "section_anchor": "section-2.4",
+      "name_anchor": "name-resource-owner-password-cre"
+    },
+    {
+      "order": 13,
+      "depth": 2,
+      "section": "2.5",
+      "title": "Client Authentication",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.5",
+      "section_anchor": "section-2.5",
+      "name_anchor": "name-client-authentication"
+    },
+    {
+      "order": 14,
+      "depth": 2,
+      "section": "2.6",
+      "title": "Other Recommendations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-2.6",
+      "section_anchor": "section-2.6",
+      "name_anchor": "name-other-recommendations"
+    },
+    {
+      "order": 15,
+      "depth": 1,
+      "section": "3",
+      "title": "The Updated OAuth 2.0 Attacker Model",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-3",
+      "section_anchor": "section-3",
+      "name_anchor": "name-the-updated-oauth-20-attack"
+    },
+    {
+      "order": 16,
+      "depth": 1,
+      "section": "4",
+      "title": "Attacks and Mitigations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4",
+      "section_anchor": "section-4",
+      "name_anchor": "name-attacks-and-mitigations"
+    },
+    {
+      "order": 17,
+      "depth": 2,
+      "section": "4.1",
+      "title": "Insufficient Redirection URI Validation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.1",
+      "section_anchor": "section-4.1",
+      "name_anchor": "name-insufficient-redirection-ur"
+    },
+    {
+      "order": 18,
+      "depth": 3,
+      "section": "4.1.1",
+      "title": "Redirect URI Validation Attacks on Authorization Code Grant",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.1.1",
+      "section_anchor": "section-4.1.1",
+      "name_anchor": "name-redirect-uri-validation-att"
+    },
+    {
+      "order": 19,
+      "depth": 3,
+      "section": "4.1.2",
+      "title": "Redirect URI Validation Attacks on Implicit Grant",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.1.2",
+      "section_anchor": "section-4.1.2",
+      "name_anchor": "name-redirect-uri-validation-atta"
+    },
+    {
+      "order": 20,
+      "depth": 3,
+      "section": "4.1.3",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.1.3",
+      "section_anchor": "section-4.1.3",
+      "name_anchor": "name-countermeasures"
+    },
+    {
+      "order": 21,
+      "depth": 2,
+      "section": "4.2",
+      "title": "Credential Leakage via Referer Headers",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.2",
+      "section_anchor": "section-4.2",
+      "name_anchor": "name-credential-leakage-via-refe"
+    },
+    {
+      "order": 22,
+      "depth": 3,
+      "section": "4.2.1",
+      "title": "Leakage from the OAuth Client",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.2.1",
+      "section_anchor": "section-4.2.1",
+      "name_anchor": "name-leakage-from-the-oauth-clie"
+    },
+    {
+      "order": 23,
+      "depth": 3,
+      "section": "4.2.2",
+      "title": "Leakage from the Authorization Server",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.2.2",
+      "section_anchor": "section-4.2.2",
+      "name_anchor": "name-leakage-from-the-authorizat"
+    },
+    {
+      "order": 24,
+      "depth": 3,
+      "section": "4.2.3",
+      "title": "Consequences",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.2.3",
+      "section_anchor": "section-4.2.3",
+      "name_anchor": "name-consequences"
+    },
+    {
+      "order": 25,
+      "depth": 3,
+      "section": "4.2.4",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.2.4",
+      "section_anchor": "section-4.2.4",
+      "name_anchor": "name-countermeasures-2"
+    },
+    {
+      "order": 26,
+      "depth": 2,
+      "section": "4.3",
+      "title": "Credential Leakage via Browser History",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.3",
+      "section_anchor": "section-4.3",
+      "name_anchor": "name-credential-leakage-via-brow"
+    },
+    {
+      "order": 27,
+      "depth": 3,
+      "section": "4.3.1",
+      "title": "Authorization Code in Browser History",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.3.1",
+      "section_anchor": "section-4.3.1",
+      "name_anchor": "name-authorization-code-in-brows"
+    },
+    {
+      "order": 28,
+      "depth": 3,
+      "section": "4.3.2",
+      "title": "Access Token in Browser History",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.3.2",
+      "section_anchor": "section-4.3.2",
+      "name_anchor": "name-access-token-in-browser-his"
+    },
+    {
+      "order": 29,
+      "depth": 2,
+      "section": "4.4",
+      "title": "Mix-Up Attacks",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.4",
+      "section_anchor": "section-4.4",
+      "name_anchor": "name-mix-up-attacks"
+    },
+    {
+      "order": 30,
+      "depth": 3,
+      "section": "4.4.1",
+      "title": "Attack Description",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.4.1",
+      "section_anchor": "section-4.4.1",
+      "name_anchor": "name-attack-description"
+    },
+    {
+      "order": 31,
+      "depth": 3,
+      "section": "4.4.2",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.4.2",
+      "section_anchor": "section-4.4.2",
+      "name_anchor": "name-countermeasures-3"
+    },
+    {
+      "order": 32,
+      "depth": 4,
+      "section": "4.4.2.1",
+      "title": "Mix-Up Defense via Issuer Identification",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.4.2.1",
+      "section_anchor": "section-4.4.2.1",
+      "name_anchor": "name-mix-up-defense-via-issuer-i"
+    },
+    {
+      "order": 33,
+      "depth": 4,
+      "section": "4.4.2.2",
+      "title": "Mix-Up Defense via Distinct Redirect URIs",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.4.2.2",
+      "section_anchor": "section-4.4.2.2",
+      "name_anchor": "name-mix-up-defense-via-distinct"
+    },
+    {
+      "order": 34,
+      "depth": 2,
+      "section": "4.5",
+      "title": "Authorization Code Injection",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5",
+      "section_anchor": "section-4.5",
+      "name_anchor": "name-authorization-code-injectio"
+    },
+    {
+      "order": 35,
+      "depth": 3,
+      "section": "4.5.1",
+      "title": "Attack Description",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5.1",
+      "section_anchor": "section-4.5.1",
+      "name_anchor": "name-attack-description-2"
+    },
+    {
+      "order": 36,
+      "depth": 3,
+      "section": "4.5.2",
+      "title": "Discussion",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5.2",
+      "section_anchor": "section-4.5.2",
+      "name_anchor": "name-discussion"
+    },
+    {
+      "order": 37,
+      "depth": 3,
+      "section": "4.5.3",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5.3",
+      "section_anchor": "section-4.5.3",
+      "name_anchor": "name-countermeasures-4"
+    },
+    {
+      "order": 38,
+      "depth": 4,
+      "section": "4.5.3.1",
+      "title": "PKCE",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5.3.1",
+      "section_anchor": "section-4.5.3.1",
+      "name_anchor": "name-pkce"
+    },
+    {
+      "order": 39,
+      "depth": 4,
+      "section": "4.5.3.2",
+      "title": "Nonce",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5.3.2",
+      "section_anchor": "section-4.5.3.2",
+      "name_anchor": "name-nonce"
+    },
+    {
+      "order": 40,
+      "depth": 4,
+      "section": "4.5.3.3",
+      "title": "Other Solutions",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5.3.3",
+      "section_anchor": "section-4.5.3.3",
+      "name_anchor": "name-other-solutions"
+    },
+    {
+      "order": 41,
+      "depth": 3,
+      "section": "4.5.4",
+      "title": "Limitations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.5.4",
+      "section_anchor": "section-4.5.4",
+      "name_anchor": "name-limitations"
+    },
+    {
+      "order": 42,
+      "depth": 2,
+      "section": "4.6",
+      "title": "Access Token Injection",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.6",
+      "section_anchor": "section-4.6",
+      "name_anchor": "name-access-token-injection"
+    },
+    {
+      "order": 43,
+      "depth": 3,
+      "section": "4.6.1",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.6.1",
+      "section_anchor": "section-4.6.1",
+      "name_anchor": "name-countermeasures-5"
+    },
+    {
+      "order": 44,
+      "depth": 2,
+      "section": "4.7",
+      "title": "Cross-Site Request Forgery",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.7",
+      "section_anchor": "section-4.7",
+      "name_anchor": "name-cross-site-request-forgery"
+    },
+    {
+      "order": 45,
+      "depth": 3,
+      "section": "4.7.1",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.7.1",
+      "section_anchor": "section-4.7.1",
+      "name_anchor": "name-countermeasures-6"
+    },
+    {
+      "order": 46,
+      "depth": 2,
+      "section": "4.8",
+      "title": "PKCE Downgrade Attack",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.8",
+      "section_anchor": "section-4.8",
+      "name_anchor": "name-pkce-downgrade-attack"
+    },
+    {
+      "order": 47,
+      "depth": 3,
+      "section": "4.8.1",
+      "title": "Attack Description",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.8.1",
+      "section_anchor": "section-4.8.1",
+      "name_anchor": "name-attack-description-3"
+    },
+    {
+      "order": 48,
+      "depth": 3,
+      "section": "4.8.2",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.8.2",
+      "section_anchor": "section-4.8.2",
+      "name_anchor": "name-countermeasures-7"
+    },
+    {
+      "order": 49,
+      "depth": 2,
+      "section": "4.9",
+      "title": "Access Token Leakage at the Resource Server",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.9",
+      "section_anchor": "section-4.9",
+      "name_anchor": "name-access-token-leakage-at-the"
+    },
+    {
+      "order": 50,
+      "depth": 3,
+      "section": "4.9.1",
+      "title": "Access Token Phishing by Counterfeit Resource Server",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.9.1",
+      "section_anchor": "section-4.9.1",
+      "name_anchor": "name-access-token-phishing-by-co"
+    },
+    {
+      "order": 51,
+      "depth": 3,
+      "section": "4.9.2",
+      "title": "Compromised Resource Server",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.9.2",
+      "section_anchor": "section-4.9.2",
+      "name_anchor": "name-compromised-resource-server"
+    },
+    {
+      "order": 52,
+      "depth": 3,
+      "section": "4.9.3",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.9.3",
+      "section_anchor": "section-4.9.3",
+      "name_anchor": "name-countermeasures-8"
+    },
+    {
+      "order": 53,
+      "depth": 2,
+      "section": "4.10",
+      "title": "Misuse of Stolen Access Tokens",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.10",
+      "section_anchor": "section-4.10",
+      "name_anchor": "name-misuse-of-stolen-access-tok"
+    },
+    {
+      "order": 54,
+      "depth": 3,
+      "section": "4.10.1",
+      "title": "Sender-Constrained Access Tokens",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.10.1",
+      "section_anchor": "section-4.10.1",
+      "name_anchor": "name-sender-constrained-access-t"
+    },
+    {
+      "order": 55,
+      "depth": 3,
+      "section": "4.10.2",
+      "title": "Audience-Restricted Access Tokens",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.10.2",
+      "section_anchor": "section-4.10.2",
+      "name_anchor": "name-audience-restricted-access-"
+    },
+    {
+      "order": 56,
+      "depth": 3,
+      "section": "4.10.3",
+      "title": "Discussion: Preventing Leakage via Metadata",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.10.3",
+      "section_anchor": "section-4.10.3",
+      "name_anchor": "name-discussion-preventing-leaka"
+    },
+    {
+      "order": 57,
+      "depth": 2,
+      "section": "4.11",
+      "title": "Open Redirection",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.11",
+      "section_anchor": "section-4.11",
+      "name_anchor": "name-open-redirection"
+    },
+    {
+      "order": 58,
+      "depth": 3,
+      "section": "4.11.1",
+      "title": "Client as Open Redirector",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.11.1",
+      "section_anchor": "section-4.11.1",
+      "name_anchor": "name-client-as-open-redirector"
+    },
+    {
+      "order": 59,
+      "depth": 3,
+      "section": "4.11.2",
+      "title": "Authorization Server as Open Redirector",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.11.2",
+      "section_anchor": "section-4.11.2",
+      "name_anchor": "name-authorization-server-as-ope"
+    },
+    {
+      "order": 60,
+      "depth": 2,
+      "section": "4.12",
+      "title": "307 Redirect",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.12",
+      "section_anchor": "section-4.12",
+      "name_anchor": "name-307-redirect"
+    },
+    {
+      "order": 61,
+      "depth": 2,
+      "section": "4.13",
+      "title": "TLS Terminating Reverse Proxies",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.13",
+      "section_anchor": "section-4.13",
+      "name_anchor": "name-tls-terminating-reverse-pro"
+    },
+    {
+      "order": 62,
+      "depth": 2,
+      "section": "4.14",
+      "title": "Refresh Token Protection",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.14",
+      "section_anchor": "section-4.14",
+      "name_anchor": "name-refresh-token-protection"
+    },
+    {
+      "order": 63,
+      "depth": 3,
+      "section": "4.14.1",
+      "title": "Discussion",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.14.1",
+      "section_anchor": "section-4.14.1",
+      "name_anchor": "name-discussion-2"
+    },
+    {
+      "order": 64,
+      "depth": 3,
+      "section": "4.14.2",
+      "title": "Recommendations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.14.2",
+      "section_anchor": "section-4.14.2",
+      "name_anchor": "name-recommendations"
+    },
+    {
+      "order": 65,
+      "depth": 2,
+      "section": "4.15",
+      "title": "Client Impersonating Resource Owner",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.15",
+      "section_anchor": "section-4.15",
+      "name_anchor": "name-client-impersonating-resour"
+    },
+    {
+      "order": 66,
+      "depth": 3,
+      "section": "4.15.1",
+      "title": "Countermeasures",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.15.1",
+      "section_anchor": "section-4.15.1",
+      "name_anchor": "name-countermeasures-9"
+    },
+    {
+      "order": 67,
+      "depth": 2,
+      "section": "4.16",
+      "title": "Clickjacking",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.16",
+      "section_anchor": "section-4.16",
+      "name_anchor": "name-clickjacking"
+    },
+    {
+      "order": 68,
+      "depth": 2,
+      "section": "4.17",
+      "title": "Attacks on In-Browser Communication Flows",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.17",
+      "section_anchor": "section-4.17",
+      "name_anchor": "name-attacks-on-in-browser-commu"
+    },
+    {
+      "order": 69,
+      "depth": 3,
+      "section": "4.17.1",
+      "title": "Examples",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.17.1",
+      "section_anchor": "section-4.17.1",
+      "name_anchor": "name-examples"
+    },
+    {
+      "order": 70,
+      "depth": 4,
+      "section": "4.17.1.1",
+      "title": "Insufficient Limitation of Receiver Origins",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.17.1.1",
+      "section_anchor": "section-4.17.1.1",
+      "name_anchor": "name-insufficient-limitation-of-"
+    },
+    {
+      "order": 71,
+      "depth": 4,
+      "section": "4.17.1.2",
+      "title": "Insufficient URI Validation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.17.1.2",
+      "section_anchor": "section-4.17.1.2",
+      "name_anchor": "name-insufficient-uri-validation"
+    },
+    {
+      "order": 72,
+      "depth": 4,
+      "section": "4.17.1.3",
+      "title": "Injection after Insufficient Validation of Sender Origin",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.17.1.3",
+      "section_anchor": "section-4.17.1.3",
+      "name_anchor": "name-injection-after-insufficien"
+    },
+    {
+      "order": 73,
+      "depth": 3,
+      "section": "4.17.2",
+      "title": "Recommendations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-4.17.2",
+      "section_anchor": "section-4.17.2",
+      "name_anchor": "name-recommendations-2"
+    },
+    {
+      "order": 74,
+      "depth": 1,
+      "section": "5",
+      "title": "IANA Considerations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-5",
+      "section_anchor": "section-5",
+      "name_anchor": "name-iana-considerations"
+    },
+    {
+      "order": 75,
+      "depth": 1,
+      "section": "6",
+      "title": "Security Considerations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-6",
+      "section_anchor": "section-6",
+      "name_anchor": "name-security-considerations"
+    },
+    {
+      "order": 76,
+      "depth": 1,
+      "section": "7",
+      "title": "References",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-7",
+      "section_anchor": "section-7",
+      "name_anchor": "name-references"
+    },
+    {
+      "order": 77,
+      "depth": 2,
+      "section": "7.1",
+      "title": "Normative References",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-7.1",
+      "section_anchor": "section-7.1",
+      "name_anchor": "name-normative-references"
+    },
+    {
+      "order": 78,
+      "depth": 2,
+      "section": "7.2",
+      "title": "Informative References",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#section-7.2",
+      "section_anchor": "section-7.2",
+      "name_anchor": "name-informative-references"
+    },
+    {
+      "order": 79,
+      "depth": 1,
+      "section": "Appendix A",
+      "title": "Acknowledgements",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#appendix-A",
+      "section_anchor": "appendix-A",
+      "name_anchor": "name-acknowledgements"
+    },
+    {
+      "order": 80,
+      "depth": 1,
+      "section": "Appendix B",
+      "title": "Authors' Addresses",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9700#appendix-B",
+      "section_anchor": "appendix-B",
+      "name_anchor": "name-authors-addresses"
+    }
+  ]
+}

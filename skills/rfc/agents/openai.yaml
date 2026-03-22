@@ -1,0 +1,4 @@
+interface:
+  display_name: "RFC"
+  short_description: "Use RFC 9110 and RFC 9700"
+  default_prompt: "Use RFC to implement a CRUD API: "

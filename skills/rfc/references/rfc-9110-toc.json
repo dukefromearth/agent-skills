@@ -1,0 +1,2752 @@
+{
+  "rfc": "9110",
+  "source_url": "https://datatracker.ietf.org/doc/html/rfc9110",
+  "generated_at_utc": "2026-03-22T17:53:54Z",
+  "entries": [
+    {
+      "order": 1,
+      "depth": 1,
+      "section": "1",
+      "title": "Introduction",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-1",
+      "section_anchor": "section-1",
+      "name_anchor": "name-introduction"
+    },
+    {
+      "order": 2,
+      "depth": 2,
+      "section": "1.1",
+      "title": "Purpose",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-1.1",
+      "section_anchor": "section-1.1",
+      "name_anchor": "name-purpose"
+    },
+    {
+      "order": 3,
+      "depth": 2,
+      "section": "1.2",
+      "title": "History and Evolution",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-1.2",
+      "section_anchor": "section-1.2",
+      "name_anchor": "name-history-and-evolution"
+    },
+    {
+      "order": 4,
+      "depth": 2,
+      "section": "1.3",
+      "title": "Core Semantics",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-1.3",
+      "section_anchor": "section-1.3",
+      "name_anchor": "name-core-semantics"
+    },
+    {
+      "order": 5,
+      "depth": 2,
+      "section": "1.4",
+      "title": "Specifications Obsoleted by This Document",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-1.4",
+      "section_anchor": "section-1.4",
+      "name_anchor": "name-specifications-obsoleted-by"
+    },
+    {
+      "order": 6,
+      "depth": 1,
+      "section": "2",
+      "title": "Conformance",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-2",
+      "section_anchor": "section-2",
+      "name_anchor": "name-conformance"
+    },
+    {
+      "order": 7,
+      "depth": 2,
+      "section": "2.1",
+      "title": "Syntax Notation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-2.1",
+      "section_anchor": "section-2.1",
+      "name_anchor": "name-syntax-notation"
+    },
+    {
+      "order": 8,
+      "depth": 2,
+      "section": "2.2",
+      "title": "Requirements Notation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-2.2",
+      "section_anchor": "section-2.2",
+      "name_anchor": "name-requirements-notation"
+    },
+    {
+      "order": 9,
+      "depth": 2,
+      "section": "2.3",
+      "title": "Length Requirements",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-2.3",
+      "section_anchor": "section-2.3",
+      "name_anchor": "name-length-requirements"
+    },
+    {
+      "order": 10,
+      "depth": 2,
+      "section": "2.4",
+      "title": "Error Handling",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-2.4",
+      "section_anchor": "section-2.4",
+      "name_anchor": "name-error-handling"
+    },
+    {
+      "order": 11,
+      "depth": 2,
+      "section": "2.5",
+      "title": "Protocol Version",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-2.5",
+      "section_anchor": "section-2.5",
+      "name_anchor": "name-protocol-version"
+    },
+    {
+      "order": 12,
+      "depth": 1,
+      "section": "3",
+      "title": "Terminology and Core Concepts",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3",
+      "section_anchor": "section-3",
+      "name_anchor": "name-terminology-and-core-concep"
+    },
+    {
+      "order": 13,
+      "depth": 2,
+      "section": "3.1",
+      "title": "Resources",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.1",
+      "section_anchor": "section-3.1",
+      "name_anchor": "name-resources"
+    },
+    {
+      "order": 14,
+      "depth": 2,
+      "section": "3.2",
+      "title": "Representations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.2",
+      "section_anchor": "section-3.2",
+      "name_anchor": "name-representations"
+    },
+    {
+      "order": 15,
+      "depth": 2,
+      "section": "3.3",
+      "title": "Connections, Clients, and Servers",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.3",
+      "section_anchor": "section-3.3",
+      "name_anchor": "name-connections-clients-and-ser"
+    },
+    {
+      "order": 16,
+      "depth": 2,
+      "section": "3.4",
+      "title": "Messages",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.4",
+      "section_anchor": "section-3.4",
+      "name_anchor": "name-messages"
+    },
+    {
+      "order": 17,
+      "depth": 2,
+      "section": "3.5",
+      "title": "User Agents",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.5",
+      "section_anchor": "section-3.5",
+      "name_anchor": "name-user-agents"
+    },
+    {
+      "order": 18,
+      "depth": 2,
+      "section": "3.6",
+      "title": "Origin Server",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.6",
+      "section_anchor": "section-3.6",
+      "name_anchor": "name-origin-server"
+    },
+    {
+      "order": 19,
+      "depth": 2,
+      "section": "3.7",
+      "title": "Intermediaries",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.7",
+      "section_anchor": "section-3.7",
+      "name_anchor": "name-intermediaries"
+    },
+    {
+      "order": 20,
+      "depth": 2,
+      "section": "3.8",
+      "title": "Caches",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.8",
+      "section_anchor": "section-3.8",
+      "name_anchor": "name-caches"
+    },
+    {
+      "order": 21,
+      "depth": 2,
+      "section": "3.9",
+      "title": "Example Message Exchange",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-3.9",
+      "section_anchor": "section-3.9",
+      "name_anchor": "name-example-message-exchange"
+    },
+    {
+      "order": 22,
+      "depth": 1,
+      "section": "4",
+      "title": "Identifiers in HTTP",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4",
+      "section_anchor": "section-4",
+      "name_anchor": "name-identifiers-in-http"
+    },
+    {
+      "order": 23,
+      "depth": 2,
+      "section": "4.1",
+      "title": "URI References",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.1",
+      "section_anchor": "section-4.1",
+      "name_anchor": "name-uri-references"
+    },
+    {
+      "order": 24,
+      "depth": 2,
+      "section": "4.2",
+      "title": "HTTP-Related URI Schemes",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.2",
+      "section_anchor": "section-4.2",
+      "name_anchor": "name-http-related-uri-schemes"
+    },
+    {
+      "order": 25,
+      "depth": 3,
+      "section": "4.2.1",
+      "title": "http URI Scheme",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.1",
+      "section_anchor": "section-4.2.1",
+      "name_anchor": "name-http-uri-scheme"
+    },
+    {
+      "order": 26,
+      "depth": 3,
+      "section": "4.2.2",
+      "title": "https URI Scheme",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.2",
+      "section_anchor": "section-4.2.2",
+      "name_anchor": "name-https-uri-scheme"
+    },
+    {
+      "order": 27,
+      "depth": 3,
+      "section": "4.2.3",
+      "title": "http(s) Normalization and Comparison",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.3",
+      "section_anchor": "section-4.2.3",
+      "name_anchor": "name-https-normalization-and-com"
+    },
+    {
+      "order": 28,
+      "depth": 3,
+      "section": "4.2.4",
+      "title": "Deprecation of userinfo in http(s) URIs",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.4",
+      "section_anchor": "section-4.2.4",
+      "name_anchor": "name-deprecation-of-userinfo-in-"
+    },
+    {
+      "order": 29,
+      "depth": 3,
+      "section": "4.2.5",
+      "title": "http(s) References with Fragment Identifiers",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.5",
+      "section_anchor": "section-4.2.5",
+      "name_anchor": "name-https-references-with-fragm"
+    },
+    {
+      "order": 30,
+      "depth": 2,
+      "section": "4.3",
+      "title": "Authoritative Access",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.3",
+      "section_anchor": "section-4.3",
+      "name_anchor": "name-authoritative-access"
+    },
+    {
+      "order": 31,
+      "depth": 3,
+      "section": "4.3.1",
+      "title": "URI Origin",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.3.1",
+      "section_anchor": "section-4.3.1",
+      "name_anchor": "name-uri-origin"
+    },
+    {
+      "order": 32,
+      "depth": 3,
+      "section": "4.3.2",
+      "title": "http Origins",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.3.2",
+      "section_anchor": "section-4.3.2",
+      "name_anchor": "name-http-origins"
+    },
+    {
+      "order": 33,
+      "depth": 3,
+      "section": "4.3.3",
+      "title": "https Origins",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.3.3",
+      "section_anchor": "section-4.3.3",
+      "name_anchor": "name-https-origins"
+    },
+    {
+      "order": 34,
+      "depth": 3,
+      "section": "4.3.4",
+      "title": "https Certificate Verification",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.3.4",
+      "section_anchor": "section-4.3.4",
+      "name_anchor": "name-https-certificate-verificat"
+    },
+    {
+      "order": 35,
+      "depth": 3,
+      "section": "4.3.5",
+      "title": "IP-ID Reference Identity",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-4.3.5",
+      "section_anchor": "section-4.3.5",
+      "name_anchor": "name-ip-id-reference-identity"
+    },
+    {
+      "order": 36,
+      "depth": 1,
+      "section": "5",
+      "title": "Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5",
+      "section_anchor": "section-5",
+      "name_anchor": "name-fields"
+    },
+    {
+      "order": 37,
+      "depth": 2,
+      "section": "5.1",
+      "title": "Field Names",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.1",
+      "section_anchor": "section-5.1",
+      "name_anchor": "name-field-names"
+    },
+    {
+      "order": 38,
+      "depth": 2,
+      "section": "5.2",
+      "title": "Field Lines and Combined Field Value",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.2",
+      "section_anchor": "section-5.2",
+      "name_anchor": "name-field-lines-and-combined-fi"
+    },
+    {
+      "order": 39,
+      "depth": 2,
+      "section": "5.3",
+      "title": "Field Order",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.3",
+      "section_anchor": "section-5.3",
+      "name_anchor": "name-field-order"
+    },
+    {
+      "order": 40,
+      "depth": 2,
+      "section": "5.4",
+      "title": "Field Limits",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.4",
+      "section_anchor": "section-5.4",
+      "name_anchor": "name-field-limits"
+    },
+    {
+      "order": 41,
+      "depth": 2,
+      "section": "5.5",
+      "title": "Field Values",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.5",
+      "section_anchor": "section-5.5",
+      "name_anchor": "name-field-values"
+    },
+    {
+      "order": 42,
+      "depth": 2,
+      "section": "5.6",
+      "title": "Common Rules for Defining Field Values",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6",
+      "section_anchor": "section-5.6",
+      "name_anchor": "name-common-rules-for-defining-f"
+    },
+    {
+      "order": 43,
+      "depth": 3,
+      "section": "5.6.1",
+      "title": "Lists (#rule ABNF Extension)",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.1",
+      "section_anchor": "section-5.6.1",
+      "name_anchor": "name-lists-rule-abnf-extension"
+    },
+    {
+      "order": 44,
+      "depth": 4,
+      "section": "5.6.1.1",
+      "title": "Sender Requirements",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.1.1",
+      "section_anchor": "section-5.6.1.1",
+      "name_anchor": "name-sender-requirements"
+    },
+    {
+      "order": 45,
+      "depth": 4,
+      "section": "5.6.1.2",
+      "title": "Recipient Requirements",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.1.2",
+      "section_anchor": "section-5.6.1.2",
+      "name_anchor": "name-recipient-requirements"
+    },
+    {
+      "order": 46,
+      "depth": 3,
+      "section": "5.6.2",
+      "title": "Tokens",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.2",
+      "section_anchor": "section-5.6.2",
+      "name_anchor": "name-tokens"
+    },
+    {
+      "order": 47,
+      "depth": 3,
+      "section": "5.6.3",
+      "title": "Whitespace",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.3",
+      "section_anchor": "section-5.6.3",
+      "name_anchor": "name-whitespace"
+    },
+    {
+      "order": 48,
+      "depth": 3,
+      "section": "5.6.4",
+      "title": "Quoted Strings",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.4",
+      "section_anchor": "section-5.6.4",
+      "name_anchor": "name-quoted-strings"
+    },
+    {
+      "order": 49,
+      "depth": 3,
+      "section": "5.6.5",
+      "title": "Comments",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.5",
+      "section_anchor": "section-5.6.5",
+      "name_anchor": "name-comments"
+    },
+    {
+      "order": 50,
+      "depth": 3,
+      "section": "5.6.6",
+      "title": "Parameters",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.6",
+      "section_anchor": "section-5.6.6",
+      "name_anchor": "name-parameters"
+    },
+    {
+      "order": 51,
+      "depth": 3,
+      "section": "5.6.7",
+      "title": "Date/Time Formats",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-5.6.7",
+      "section_anchor": "section-5.6.7",
+      "name_anchor": "name-date-time-formats"
+    },
+    {
+      "order": 52,
+      "depth": 1,
+      "section": "6",
+      "title": "Message Abstraction",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6",
+      "section_anchor": "section-6",
+      "name_anchor": "name-message-abstraction"
+    },
+    {
+      "order": 53,
+      "depth": 2,
+      "section": "6.1",
+      "title": "Framing and Completeness",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.1",
+      "section_anchor": "section-6.1",
+      "name_anchor": "name-framing-and-completeness"
+    },
+    {
+      "order": 54,
+      "depth": 2,
+      "section": "6.2",
+      "title": "Control Data",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.2",
+      "section_anchor": "section-6.2",
+      "name_anchor": "name-control-data"
+    },
+    {
+      "order": 55,
+      "depth": 2,
+      "section": "6.3",
+      "title": "Header Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.3",
+      "section_anchor": "section-6.3",
+      "name_anchor": "name-header-fields"
+    },
+    {
+      "order": 56,
+      "depth": 2,
+      "section": "6.4",
+      "title": "Content",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.4",
+      "section_anchor": "section-6.4",
+      "name_anchor": "name-content"
+    },
+    {
+      "order": 57,
+      "depth": 3,
+      "section": "6.4.1",
+      "title": "Content Semantics",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.4.1",
+      "section_anchor": "section-6.4.1",
+      "name_anchor": "name-content-semantics"
+    },
+    {
+      "order": 58,
+      "depth": 3,
+      "section": "6.4.2",
+      "title": "Identifying Content",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.4.2",
+      "section_anchor": "section-6.4.2",
+      "name_anchor": "name-identifying-content"
+    },
+    {
+      "order": 59,
+      "depth": 2,
+      "section": "6.5",
+      "title": "Trailer Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.5",
+      "section_anchor": "section-6.5",
+      "name_anchor": "name-trailer-fields"
+    },
+    {
+      "order": 60,
+      "depth": 3,
+      "section": "6.5.1",
+      "title": "Limitations on Use of Trailers",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.5.1",
+      "section_anchor": "section-6.5.1",
+      "name_anchor": "name-limitations-on-use-of-trail"
+    },
+    {
+      "order": 61,
+      "depth": 3,
+      "section": "6.5.2",
+      "title": "Processing Trailer Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.5.2",
+      "section_anchor": "section-6.5.2",
+      "name_anchor": "name-processing-trailer-fields"
+    },
+    {
+      "order": 62,
+      "depth": 2,
+      "section": "6.6",
+      "title": "Message Metadata",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.6",
+      "section_anchor": "section-6.6",
+      "name_anchor": "name-message-metadata"
+    },
+    {
+      "order": 63,
+      "depth": 3,
+      "section": "6.6.1",
+      "title": "Date",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.6.1",
+      "section_anchor": "section-6.6.1",
+      "name_anchor": "name-date"
+    },
+    {
+      "order": 64,
+      "depth": 3,
+      "section": "6.6.2",
+      "title": "Trailer",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-6.6.2",
+      "section_anchor": "section-6.6.2",
+      "name_anchor": "name-trailer"
+    },
+    {
+      "order": 65,
+      "depth": 1,
+      "section": "7",
+      "title": "Routing HTTP Messages",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7",
+      "section_anchor": "section-7",
+      "name_anchor": "name-routing-http-messages"
+    },
+    {
+      "order": 66,
+      "depth": 2,
+      "section": "7.1",
+      "title": "Determining the Target Resource",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.1",
+      "section_anchor": "section-7.1",
+      "name_anchor": "name-determining-the-target-reso"
+    },
+    {
+      "order": 67,
+      "depth": 2,
+      "section": "7.2",
+      "title": "Host and :authority",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.2",
+      "section_anchor": "section-7.2",
+      "name_anchor": "name-host-and-authority"
+    },
+    {
+      "order": 68,
+      "depth": 2,
+      "section": "7.3",
+      "title": "Routing Inbound Requests",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.3",
+      "section_anchor": "section-7.3",
+      "name_anchor": "name-routing-inbound-requests"
+    },
+    {
+      "order": 69,
+      "depth": 3,
+      "section": "7.3.1",
+      "title": "To a Cache",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.3.1",
+      "section_anchor": "section-7.3.1",
+      "name_anchor": "name-to-a-cache"
+    },
+    {
+      "order": 70,
+      "depth": 3,
+      "section": "7.3.2",
+      "title": "To a Proxy",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.3.2",
+      "section_anchor": "section-7.3.2",
+      "name_anchor": "name-to-a-proxy"
+    },
+    {
+      "order": 71,
+      "depth": 3,
+      "section": "7.3.3",
+      "title": "To the Origin",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.3.3",
+      "section_anchor": "section-7.3.3",
+      "name_anchor": "name-to-the-origin"
+    },
+    {
+      "order": 72,
+      "depth": 2,
+      "section": "7.4",
+      "title": "Rejecting Misdirected Requests",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.4",
+      "section_anchor": "section-7.4",
+      "name_anchor": "name-rejecting-misdirected-reque"
+    },
+    {
+      "order": 73,
+      "depth": 2,
+      "section": "7.5",
+      "title": "Response Correlation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.5",
+      "section_anchor": "section-7.5",
+      "name_anchor": "name-response-correlation"
+    },
+    {
+      "order": 74,
+      "depth": 2,
+      "section": "7.6",
+      "title": "Message Forwarding",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.6",
+      "section_anchor": "section-7.6",
+      "name_anchor": "name-message-forwarding"
+    },
+    {
+      "order": 75,
+      "depth": 3,
+      "section": "7.6.1",
+      "title": "Connection",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.6.1",
+      "section_anchor": "section-7.6.1",
+      "name_anchor": "name-connection"
+    },
+    {
+      "order": 76,
+      "depth": 3,
+      "section": "7.6.2",
+      "title": "Max-Forwards",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.6.2",
+      "section_anchor": "section-7.6.2",
+      "name_anchor": "name-max-forwards"
+    },
+    {
+      "order": 77,
+      "depth": 3,
+      "section": "7.6.3",
+      "title": "Via",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.6.3",
+      "section_anchor": "section-7.6.3",
+      "name_anchor": "name-via"
+    },
+    {
+      "order": 78,
+      "depth": 2,
+      "section": "7.7",
+      "title": "Message Transformations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.7",
+      "section_anchor": "section-7.7",
+      "name_anchor": "name-message-transformations"
+    },
+    {
+      "order": 79,
+      "depth": 2,
+      "section": "7.8",
+      "title": "Upgrade",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-7.8",
+      "section_anchor": "section-7.8",
+      "name_anchor": "name-upgrade"
+    },
+    {
+      "order": 80,
+      "depth": 1,
+      "section": "8",
+      "title": "Representation Data and Metadata",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8",
+      "section_anchor": "section-8",
+      "name_anchor": "name-representation-data-and-met"
+    },
+    {
+      "order": 81,
+      "depth": 2,
+      "section": "8.1",
+      "title": "Representation Data",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.1",
+      "section_anchor": "section-8.1",
+      "name_anchor": "name-representation-data"
+    },
+    {
+      "order": 82,
+      "depth": 2,
+      "section": "8.2",
+      "title": "Representation Metadata",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.2",
+      "section_anchor": "section-8.2",
+      "name_anchor": "name-representation-metadata"
+    },
+    {
+      "order": 83,
+      "depth": 2,
+      "section": "8.3",
+      "title": "Content-Type",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.3",
+      "section_anchor": "section-8.3",
+      "name_anchor": "name-content-type"
+    },
+    {
+      "order": 84,
+      "depth": 3,
+      "section": "8.3.1",
+      "title": "Media Type",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.3.1",
+      "section_anchor": "section-8.3.1",
+      "name_anchor": "name-media-type"
+    },
+    {
+      "order": 85,
+      "depth": 3,
+      "section": "8.3.2",
+      "title": "Charset",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.3.2",
+      "section_anchor": "section-8.3.2",
+      "name_anchor": "name-charset"
+    },
+    {
+      "order": 86,
+      "depth": 3,
+      "section": "8.3.3",
+      "title": "Multipart Types",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.3.3",
+      "section_anchor": "section-8.3.3",
+      "name_anchor": "name-multipart-types"
+    },
+    {
+      "order": 87,
+      "depth": 2,
+      "section": "8.4",
+      "title": "Content-Encoding",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.4",
+      "section_anchor": "section-8.4",
+      "name_anchor": "name-content-encoding"
+    },
+    {
+      "order": 88,
+      "depth": 3,
+      "section": "8.4.1",
+      "title": "Content Codings",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.4.1",
+      "section_anchor": "section-8.4.1",
+      "name_anchor": "name-content-codings"
+    },
+    {
+      "order": 89,
+      "depth": 4,
+      "section": "8.4.1.1",
+      "title": "Compress Coding",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.4.1.1",
+      "section_anchor": "section-8.4.1.1",
+      "name_anchor": "name-compress-coding"
+    },
+    {
+      "order": 90,
+      "depth": 4,
+      "section": "8.4.1.2",
+      "title": "Deflate Coding",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.4.1.2",
+      "section_anchor": "section-8.4.1.2",
+      "name_anchor": "name-deflate-coding"
+    },
+    {
+      "order": 91,
+      "depth": 4,
+      "section": "8.4.1.3",
+      "title": "Gzip Coding",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.4.1.3",
+      "section_anchor": "section-8.4.1.3",
+      "name_anchor": "name-gzip-coding"
+    },
+    {
+      "order": 92,
+      "depth": 2,
+      "section": "8.5",
+      "title": "Content-Language",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.5",
+      "section_anchor": "section-8.5",
+      "name_anchor": "name-content-language"
+    },
+    {
+      "order": 93,
+      "depth": 3,
+      "section": "8.5.1",
+      "title": "Language Tags",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.5.1",
+      "section_anchor": "section-8.5.1",
+      "name_anchor": "name-language-tags"
+    },
+    {
+      "order": 94,
+      "depth": 2,
+      "section": "8.6",
+      "title": "Content-Length",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.6",
+      "section_anchor": "section-8.6",
+      "name_anchor": "name-content-length"
+    },
+    {
+      "order": 95,
+      "depth": 2,
+      "section": "8.7",
+      "title": "Content-Location",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.7",
+      "section_anchor": "section-8.7",
+      "name_anchor": "name-content-location"
+    },
+    {
+      "order": 96,
+      "depth": 2,
+      "section": "8.8",
+      "title": "Validator Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8",
+      "section_anchor": "section-8.8",
+      "name_anchor": "name-validator-fields"
+    },
+    {
+      "order": 97,
+      "depth": 3,
+      "section": "8.8.1",
+      "title": "Weak versus Strong",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.1",
+      "section_anchor": "section-8.8.1",
+      "name_anchor": "name-weak-versus-strong"
+    },
+    {
+      "order": 98,
+      "depth": 3,
+      "section": "8.8.2",
+      "title": "Last-Modified",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.2",
+      "section_anchor": "section-8.8.2",
+      "name_anchor": "name-last-modified"
+    },
+    {
+      "order": 99,
+      "depth": 4,
+      "section": "8.8.2.1",
+      "title": "Generation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.2.1",
+      "section_anchor": "section-8.8.2.1",
+      "name_anchor": "name-generation"
+    },
+    {
+      "order": 100,
+      "depth": 4,
+      "section": "8.8.2.2",
+      "title": "Comparison",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.2.2",
+      "section_anchor": "section-8.8.2.2",
+      "name_anchor": "name-comparison"
+    },
+    {
+      "order": 101,
+      "depth": 3,
+      "section": "8.8.3",
+      "title": "ETag",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.3",
+      "section_anchor": "section-8.8.3",
+      "name_anchor": "name-etag"
+    },
+    {
+      "order": 102,
+      "depth": 4,
+      "section": "8.8.3.1",
+      "title": "Generation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.3.1",
+      "section_anchor": "section-8.8.3.1",
+      "name_anchor": "name-generation-2"
+    },
+    {
+      "order": 103,
+      "depth": 4,
+      "section": "8.8.3.2",
+      "title": "Comparison",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.3.2",
+      "section_anchor": "section-8.8.3.2",
+      "name_anchor": "name-comparison-2"
+    },
+    {
+      "order": 104,
+      "depth": 4,
+      "section": "8.8.3.3",
+      "title": "Example: Entity Tags Varying on Content-Negotiated Resources",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-8.8.3.3",
+      "section_anchor": "section-8.8.3.3",
+      "name_anchor": "name-example-entity-tags-varying"
+    },
+    {
+      "order": 105,
+      "depth": 1,
+      "section": "9",
+      "title": "Methods",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9",
+      "section_anchor": "section-9",
+      "name_anchor": "name-methods"
+    },
+    {
+      "order": 106,
+      "depth": 2,
+      "section": "9.1",
+      "title": "Overview",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.1",
+      "section_anchor": "section-9.1",
+      "name_anchor": "name-overview"
+    },
+    {
+      "order": 107,
+      "depth": 2,
+      "section": "9.2",
+      "title": "Common Method Properties",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.2",
+      "section_anchor": "section-9.2",
+      "name_anchor": "name-common-method-properties"
+    },
+    {
+      "order": 108,
+      "depth": 3,
+      "section": "9.2.1",
+      "title": "Safe Methods",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.2.1",
+      "section_anchor": "section-9.2.1",
+      "name_anchor": "name-safe-methods"
+    },
+    {
+      "order": 109,
+      "depth": 3,
+      "section": "9.2.2",
+      "title": "Idempotent Methods",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.2.2",
+      "section_anchor": "section-9.2.2",
+      "name_anchor": "name-idempotent-methods"
+    },
+    {
+      "order": 110,
+      "depth": 3,
+      "section": "9.2.3",
+      "title": "Methods and Caching",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.2.3",
+      "section_anchor": "section-9.2.3",
+      "name_anchor": "name-methods-and-caching"
+    },
+    {
+      "order": 111,
+      "depth": 2,
+      "section": "9.3",
+      "title": "Method Definitions",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3",
+      "section_anchor": "section-9.3",
+      "name_anchor": "name-method-definitions"
+    },
+    {
+      "order": 112,
+      "depth": 3,
+      "section": "9.3.1",
+      "title": "GET",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.1",
+      "section_anchor": "section-9.3.1",
+      "name_anchor": "name-get"
+    },
+    {
+      "order": 113,
+      "depth": 3,
+      "section": "9.3.2",
+      "title": "HEAD",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.2",
+      "section_anchor": "section-9.3.2",
+      "name_anchor": "name-head"
+    },
+    {
+      "order": 114,
+      "depth": 3,
+      "section": "9.3.3",
+      "title": "POST",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.3",
+      "section_anchor": "section-9.3.3",
+      "name_anchor": "name-post"
+    },
+    {
+      "order": 115,
+      "depth": 3,
+      "section": "9.3.4",
+      "title": "PUT",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.4",
+      "section_anchor": "section-9.3.4",
+      "name_anchor": "name-put"
+    },
+    {
+      "order": 116,
+      "depth": 3,
+      "section": "9.3.5",
+      "title": "DELETE",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.5",
+      "section_anchor": "section-9.3.5",
+      "name_anchor": "name-delete"
+    },
+    {
+      "order": 117,
+      "depth": 3,
+      "section": "9.3.6",
+      "title": "CONNECT",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.6",
+      "section_anchor": "section-9.3.6",
+      "name_anchor": "name-connect"
+    },
+    {
+      "order": 118,
+      "depth": 3,
+      "section": "9.3.7",
+      "title": "OPTIONS",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.7",
+      "section_anchor": "section-9.3.7",
+      "name_anchor": "name-options"
+    },
+    {
+      "order": 119,
+      "depth": 3,
+      "section": "9.3.8",
+      "title": "TRACE",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.8",
+      "section_anchor": "section-9.3.8",
+      "name_anchor": "name-trace"
+    },
+    {
+      "order": 120,
+      "depth": 1,
+      "section": "10",
+      "title": "Message Context",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10",
+      "section_anchor": "section-10",
+      "name_anchor": "name-message-context"
+    },
+    {
+      "order": 121,
+      "depth": 2,
+      "section": "10.1",
+      "title": "Request Context Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.1",
+      "section_anchor": "section-10.1",
+      "name_anchor": "name-request-context-fields"
+    },
+    {
+      "order": 122,
+      "depth": 3,
+      "section": "10.1.1",
+      "title": "Expect",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.1.1",
+      "section_anchor": "section-10.1.1",
+      "name_anchor": "name-expect"
+    },
+    {
+      "order": 123,
+      "depth": 3,
+      "section": "10.1.2",
+      "title": "From",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.1.2",
+      "section_anchor": "section-10.1.2",
+      "name_anchor": "name-from"
+    },
+    {
+      "order": 124,
+      "depth": 3,
+      "section": "10.1.3",
+      "title": "Referer",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.1.3",
+      "section_anchor": "section-10.1.3",
+      "name_anchor": "name-referer"
+    },
+    {
+      "order": 125,
+      "depth": 3,
+      "section": "10.1.4",
+      "title": "TE",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.1.4",
+      "section_anchor": "section-10.1.4",
+      "name_anchor": "name-te"
+    },
+    {
+      "order": 126,
+      "depth": 3,
+      "section": "10.1.5",
+      "title": "User-Agent",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.1.5",
+      "section_anchor": "section-10.1.5",
+      "name_anchor": "name-user-agent"
+    },
+    {
+      "order": 127,
+      "depth": 2,
+      "section": "10.2",
+      "title": "Response Context Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.2",
+      "section_anchor": "section-10.2",
+      "name_anchor": "name-response-context-fields"
+    },
+    {
+      "order": 128,
+      "depth": 3,
+      "section": "10.2.1",
+      "title": "Allow",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.2.1",
+      "section_anchor": "section-10.2.1",
+      "name_anchor": "name-allow"
+    },
+    {
+      "order": 129,
+      "depth": 3,
+      "section": "10.2.2",
+      "title": "Location",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.2.2",
+      "section_anchor": "section-10.2.2",
+      "name_anchor": "name-location"
+    },
+    {
+      "order": 130,
+      "depth": 3,
+      "section": "10.2.3",
+      "title": "Retry-After",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.2.3",
+      "section_anchor": "section-10.2.3",
+      "name_anchor": "name-retry-after"
+    },
+    {
+      "order": 131,
+      "depth": 3,
+      "section": "10.2.4",
+      "title": "Server",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-10.2.4",
+      "section_anchor": "section-10.2.4",
+      "name_anchor": "name-server"
+    },
+    {
+      "order": 132,
+      "depth": 1,
+      "section": "11",
+      "title": "HTTP Authentication",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11",
+      "section_anchor": "section-11",
+      "name_anchor": "name-http-authentication"
+    },
+    {
+      "order": 133,
+      "depth": 2,
+      "section": "11.1",
+      "title": "Authentication Scheme",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.1",
+      "section_anchor": "section-11.1",
+      "name_anchor": "name-authentication-scheme"
+    },
+    {
+      "order": 134,
+      "depth": 2,
+      "section": "11.2",
+      "title": "Authentication Parameters",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.2",
+      "section_anchor": "section-11.2",
+      "name_anchor": "name-authentication-parameters"
+    },
+    {
+      "order": 135,
+      "depth": 2,
+      "section": "11.3",
+      "title": "Challenge and Response",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.3",
+      "section_anchor": "section-11.3",
+      "name_anchor": "name-challenge-and-response"
+    },
+    {
+      "order": 136,
+      "depth": 2,
+      "section": "11.4",
+      "title": "Credentials",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.4",
+      "section_anchor": "section-11.4",
+      "name_anchor": "name-credentials"
+    },
+    {
+      "order": 137,
+      "depth": 2,
+      "section": "11.5",
+      "title": "Establishing a Protection Space (Realm)",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.5",
+      "section_anchor": "section-11.5",
+      "name_anchor": "name-establishing-a-protection-s"
+    },
+    {
+      "order": 138,
+      "depth": 2,
+      "section": "11.6",
+      "title": "Authenticating Users to Origin Servers",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.6",
+      "section_anchor": "section-11.6",
+      "name_anchor": "name-authenticating-users-to-ori"
+    },
+    {
+      "order": 139,
+      "depth": 3,
+      "section": "11.6.1",
+      "title": "WWW-Authenticate",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.6.1",
+      "section_anchor": "section-11.6.1",
+      "name_anchor": "name-www-authenticate"
+    },
+    {
+      "order": 140,
+      "depth": 3,
+      "section": "11.6.2",
+      "title": "Authorization",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.6.2",
+      "section_anchor": "section-11.6.2",
+      "name_anchor": "name-authorization"
+    },
+    {
+      "order": 141,
+      "depth": 3,
+      "section": "11.6.3",
+      "title": "Authentication-Info",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.6.3",
+      "section_anchor": "section-11.6.3",
+      "name_anchor": "name-authentication-info"
+    },
+    {
+      "order": 142,
+      "depth": 2,
+      "section": "11.7",
+      "title": "Authenticating Clients to Proxies",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.7",
+      "section_anchor": "section-11.7",
+      "name_anchor": "name-authenticating-clients-to-p"
+    },
+    {
+      "order": 143,
+      "depth": 3,
+      "section": "11.7.1",
+      "title": "Proxy-Authenticate",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.7.1",
+      "section_anchor": "section-11.7.1",
+      "name_anchor": "name-proxy-authenticate"
+    },
+    {
+      "order": 144,
+      "depth": 3,
+      "section": "11.7.2",
+      "title": "Proxy-Authorization",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.7.2",
+      "section_anchor": "section-11.7.2",
+      "name_anchor": "name-proxy-authorization"
+    },
+    {
+      "order": 145,
+      "depth": 3,
+      "section": "11.7.3",
+      "title": "Proxy-Authentication-Info",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-11.7.3",
+      "section_anchor": "section-11.7.3",
+      "name_anchor": "name-proxy-authentication-info"
+    },
+    {
+      "order": 146,
+      "depth": 1,
+      "section": "12",
+      "title": "Content Negotiation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12",
+      "section_anchor": "section-12",
+      "name_anchor": "name-content-negotiation"
+    },
+    {
+      "order": 147,
+      "depth": 2,
+      "section": "12.1",
+      "title": "Proactive Negotiation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.1",
+      "section_anchor": "section-12.1",
+      "name_anchor": "name-proactive-negotiation"
+    },
+    {
+      "order": 148,
+      "depth": 2,
+      "section": "12.2",
+      "title": "Reactive Negotiation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.2",
+      "section_anchor": "section-12.2",
+      "name_anchor": "name-reactive-negotiation"
+    },
+    {
+      "order": 149,
+      "depth": 2,
+      "section": "12.3",
+      "title": "Request Content Negotiation",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.3",
+      "section_anchor": "section-12.3",
+      "name_anchor": "name-request-content-negotiation"
+    },
+    {
+      "order": 150,
+      "depth": 2,
+      "section": "12.4",
+      "title": "Content Negotiation Field Features",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.4",
+      "section_anchor": "section-12.4",
+      "name_anchor": "name-content-negotiation-field-f"
+    },
+    {
+      "order": 151,
+      "depth": 3,
+      "section": "12.4.1",
+      "title": "Absence",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.4.1",
+      "section_anchor": "section-12.4.1",
+      "name_anchor": "name-absence"
+    },
+    {
+      "order": 152,
+      "depth": 3,
+      "section": "12.4.2",
+      "title": "Quality Values",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.4.2",
+      "section_anchor": "section-12.4.2",
+      "name_anchor": "name-quality-values"
+    },
+    {
+      "order": 153,
+      "depth": 3,
+      "section": "12.4.3",
+      "title": "Wildcard Values",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.4.3",
+      "section_anchor": "section-12.4.3",
+      "name_anchor": "name-wildcard-values"
+    },
+    {
+      "order": 154,
+      "depth": 2,
+      "section": "12.5",
+      "title": "Content Negotiation Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.5",
+      "section_anchor": "section-12.5",
+      "name_anchor": "name-content-negotiation-fields"
+    },
+    {
+      "order": 155,
+      "depth": 3,
+      "section": "12.5.1",
+      "title": "Accept",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.1",
+      "section_anchor": "section-12.5.1",
+      "name_anchor": "name-accept"
+    },
+    {
+      "order": 156,
+      "depth": 3,
+      "section": "12.5.2",
+      "title": "Accept-Charset",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.2",
+      "section_anchor": "section-12.5.2",
+      "name_anchor": "name-accept-charset"
+    },
+    {
+      "order": 157,
+      "depth": 3,
+      "section": "12.5.3",
+      "title": "Accept-Encoding",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.3",
+      "section_anchor": "section-12.5.3",
+      "name_anchor": "name-accept-encoding"
+    },
+    {
+      "order": 158,
+      "depth": 3,
+      "section": "12.5.4",
+      "title": "Accept-Language",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.4",
+      "section_anchor": "section-12.5.4",
+      "name_anchor": "name-accept-language"
+    },
+    {
+      "order": 159,
+      "depth": 3,
+      "section": "12.5.5",
+      "title": "Vary",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.5",
+      "section_anchor": "section-12.5.5",
+      "name_anchor": "name-vary"
+    },
+    {
+      "order": 160,
+      "depth": 1,
+      "section": "13",
+      "title": "Conditional Requests",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13",
+      "section_anchor": "section-13",
+      "name_anchor": "name-conditional-requests"
+    },
+    {
+      "order": 161,
+      "depth": 2,
+      "section": "13.1",
+      "title": "Preconditions",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.1",
+      "section_anchor": "section-13.1",
+      "name_anchor": "name-preconditions"
+    },
+    {
+      "order": 162,
+      "depth": 3,
+      "section": "13.1.1",
+      "title": "If-Match",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.1.1",
+      "section_anchor": "section-13.1.1",
+      "name_anchor": "name-if-match"
+    },
+    {
+      "order": 163,
+      "depth": 3,
+      "section": "13.1.2",
+      "title": "If-None-Match",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.1.2",
+      "section_anchor": "section-13.1.2",
+      "name_anchor": "name-if-none-match"
+    },
+    {
+      "order": 164,
+      "depth": 3,
+      "section": "13.1.3",
+      "title": "If-Modified-Since",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.1.3",
+      "section_anchor": "section-13.1.3",
+      "name_anchor": "name-if-modified-since"
+    },
+    {
+      "order": 165,
+      "depth": 3,
+      "section": "13.1.4",
+      "title": "If-Unmodified-Since",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.1.4",
+      "section_anchor": "section-13.1.4",
+      "name_anchor": "name-if-unmodified-since"
+    },
+    {
+      "order": 166,
+      "depth": 3,
+      "section": "13.1.5",
+      "title": "If-Range",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.1.5",
+      "section_anchor": "section-13.1.5",
+      "name_anchor": "name-if-range"
+    },
+    {
+      "order": 167,
+      "depth": 2,
+      "section": "13.2",
+      "title": "Evaluation of Preconditions",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.2",
+      "section_anchor": "section-13.2",
+      "name_anchor": "name-evaluation-of-preconditions"
+    },
+    {
+      "order": 168,
+      "depth": 3,
+      "section": "13.2.1",
+      "title": "When to Evaluate",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.2.1",
+      "section_anchor": "section-13.2.1",
+      "name_anchor": "name-when-to-evaluate"
+    },
+    {
+      "order": 169,
+      "depth": 3,
+      "section": "13.2.2",
+      "title": "Precedence of Preconditions",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-13.2.2",
+      "section_anchor": "section-13.2.2",
+      "name_anchor": "name-precedence-of-preconditions"
+    },
+    {
+      "order": 170,
+      "depth": 1,
+      "section": "14",
+      "title": "Range Requests",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14",
+      "section_anchor": "section-14",
+      "name_anchor": "name-range-requests"
+    },
+    {
+      "order": 171,
+      "depth": 2,
+      "section": "14.1",
+      "title": "Range Units",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.1",
+      "section_anchor": "section-14.1",
+      "name_anchor": "name-range-units"
+    },
+    {
+      "order": 172,
+      "depth": 3,
+      "section": "14.1.1",
+      "title": "Range Specifiers",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.1.1",
+      "section_anchor": "section-14.1.1",
+      "name_anchor": "name-range-specifiers"
+    },
+    {
+      "order": 173,
+      "depth": 3,
+      "section": "14.1.2",
+      "title": "Byte Ranges",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.1.2",
+      "section_anchor": "section-14.1.2",
+      "name_anchor": "name-byte-ranges"
+    },
+    {
+      "order": 174,
+      "depth": 2,
+      "section": "14.2",
+      "title": "Range",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.2",
+      "section_anchor": "section-14.2",
+      "name_anchor": "name-range"
+    },
+    {
+      "order": 175,
+      "depth": 2,
+      "section": "14.3",
+      "title": "Accept-Ranges",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.3",
+      "section_anchor": "section-14.3",
+      "name_anchor": "name-accept-ranges"
+    },
+    {
+      "order": 176,
+      "depth": 2,
+      "section": "14.4",
+      "title": "Content-Range",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.4",
+      "section_anchor": "section-14.4",
+      "name_anchor": "name-content-range"
+    },
+    {
+      "order": 177,
+      "depth": 2,
+      "section": "14.5",
+      "title": "Partial PUT",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.5",
+      "section_anchor": "section-14.5",
+      "name_anchor": "name-partial-put"
+    },
+    {
+      "order": 178,
+      "depth": 2,
+      "section": "14.6",
+      "title": "Media Type multipart/byteranges",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-14.6",
+      "section_anchor": "section-14.6",
+      "name_anchor": "name-media-type-multipart-bytera"
+    },
+    {
+      "order": 179,
+      "depth": 1,
+      "section": "15",
+      "title": "Status Codes",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15",
+      "section_anchor": "section-15",
+      "name_anchor": "name-status-codes"
+    },
+    {
+      "order": 180,
+      "depth": 2,
+      "section": "15.1",
+      "title": "Overview of Status Codes",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.1",
+      "section_anchor": "section-15.1",
+      "name_anchor": "name-overview-of-status-codes"
+    },
+    {
+      "order": 181,
+      "depth": 2,
+      "section": "15.2",
+      "title": "Informational 1xx",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.2",
+      "section_anchor": "section-15.2",
+      "name_anchor": "name-informational-1xx"
+    },
+    {
+      "order": 182,
+      "depth": 3,
+      "section": "15.2.1",
+      "title": "100 Continue",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.2.1",
+      "section_anchor": "section-15.2.1",
+      "name_anchor": "name-100-continue"
+    },
+    {
+      "order": 183,
+      "depth": 3,
+      "section": "15.2.2",
+      "title": "101 Switching Protocols",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.2.2",
+      "section_anchor": "section-15.2.2",
+      "name_anchor": "name-101-switching-protocols"
+    },
+    {
+      "order": 184,
+      "depth": 2,
+      "section": "15.3",
+      "title": "Successful 2xx",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3",
+      "section_anchor": "section-15.3",
+      "name_anchor": "name-successful-2xx"
+    },
+    {
+      "order": 185,
+      "depth": 3,
+      "section": "15.3.1",
+      "title": "200 OK",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.1",
+      "section_anchor": "section-15.3.1",
+      "name_anchor": "name-200-ok"
+    },
+    {
+      "order": 186,
+      "depth": 3,
+      "section": "15.3.2",
+      "title": "201 Created",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.2",
+      "section_anchor": "section-15.3.2",
+      "name_anchor": "name-201-created"
+    },
+    {
+      "order": 187,
+      "depth": 3,
+      "section": "15.3.3",
+      "title": "202 Accepted",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.3",
+      "section_anchor": "section-15.3.3",
+      "name_anchor": "name-202-accepted"
+    },
+    {
+      "order": 188,
+      "depth": 3,
+      "section": "15.3.4",
+      "title": "203 Non-Authoritative Information",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.4",
+      "section_anchor": "section-15.3.4",
+      "name_anchor": "name-203-non-authoritative-infor"
+    },
+    {
+      "order": 189,
+      "depth": 3,
+      "section": "15.3.5",
+      "title": "204 No Content",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.5",
+      "section_anchor": "section-15.3.5",
+      "name_anchor": "name-204-no-content"
+    },
+    {
+      "order": 190,
+      "depth": 3,
+      "section": "15.3.6",
+      "title": "205 Reset Content",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.6",
+      "section_anchor": "section-15.3.6",
+      "name_anchor": "name-205-reset-content"
+    },
+    {
+      "order": 191,
+      "depth": 3,
+      "section": "15.3.7",
+      "title": "206 Partial Content",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.7",
+      "section_anchor": "section-15.3.7",
+      "name_anchor": "name-206-partial-content"
+    },
+    {
+      "order": 192,
+      "depth": 4,
+      "section": "15.3.7.1",
+      "title": "Single Part",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.7.1",
+      "section_anchor": "section-15.3.7.1",
+      "name_anchor": "name-single-part"
+    },
+    {
+      "order": 193,
+      "depth": 4,
+      "section": "15.3.7.2",
+      "title": "Multiple Parts",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.7.2",
+      "section_anchor": "section-15.3.7.2",
+      "name_anchor": "name-multiple-parts"
+    },
+    {
+      "order": 194,
+      "depth": 4,
+      "section": "15.3.7.3",
+      "title": "Combining Parts",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.3.7.3",
+      "section_anchor": "section-15.3.7.3",
+      "name_anchor": "name-combining-parts"
+    },
+    {
+      "order": 195,
+      "depth": 2,
+      "section": "15.4",
+      "title": "Redirection 3xx",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4",
+      "section_anchor": "section-15.4",
+      "name_anchor": "name-redirection-3xx"
+    },
+    {
+      "order": 196,
+      "depth": 3,
+      "section": "15.4.1",
+      "title": "300 Multiple Choices",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.1",
+      "section_anchor": "section-15.4.1",
+      "name_anchor": "name-300-multiple-choices"
+    },
+    {
+      "order": 197,
+      "depth": 3,
+      "section": "15.4.2",
+      "title": "301 Moved Permanently",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.2",
+      "section_anchor": "section-15.4.2",
+      "name_anchor": "name-301-moved-permanently"
+    },
+    {
+      "order": 198,
+      "depth": 3,
+      "section": "15.4.3",
+      "title": "302 Found",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.3",
+      "section_anchor": "section-15.4.3",
+      "name_anchor": "name-302-found"
+    },
+    {
+      "order": 199,
+      "depth": 3,
+      "section": "15.4.4",
+      "title": "303 See Other",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.4",
+      "section_anchor": "section-15.4.4",
+      "name_anchor": "name-303-see-other"
+    },
+    {
+      "order": 200,
+      "depth": 3,
+      "section": "15.4.5",
+      "title": "304 Not Modified",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.5",
+      "section_anchor": "section-15.4.5",
+      "name_anchor": "name-304-not-modified"
+    },
+    {
+      "order": 201,
+      "depth": 3,
+      "section": "15.4.6",
+      "title": "305 Use Proxy",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.6",
+      "section_anchor": "section-15.4.6",
+      "name_anchor": "name-305-use-proxy"
+    },
+    {
+      "order": 202,
+      "depth": 3,
+      "section": "15.4.7",
+      "title": "306 (Unused)",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.7",
+      "section_anchor": "section-15.4.7",
+      "name_anchor": "name-306-unused"
+    },
+    {
+      "order": 203,
+      "depth": 3,
+      "section": "15.4.8",
+      "title": "307 Temporary Redirect",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.8",
+      "section_anchor": "section-15.4.8",
+      "name_anchor": "name-307-temporary-redirect"
+    },
+    {
+      "order": 204,
+      "depth": 3,
+      "section": "15.4.9",
+      "title": "308 Permanent Redirect",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.4.9",
+      "section_anchor": "section-15.4.9",
+      "name_anchor": "name-308-permanent-redirect"
+    },
+    {
+      "order": 205,
+      "depth": 2,
+      "section": "15.5",
+      "title": "Client Error 4xx",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5",
+      "section_anchor": "section-15.5",
+      "name_anchor": "name-client-error-4xx"
+    },
+    {
+      "order": 206,
+      "depth": 3,
+      "section": "15.5.1",
+      "title": "400 Bad Request",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1",
+      "section_anchor": "section-15.5.1",
+      "name_anchor": "name-400-bad-request"
+    },
+    {
+      "order": 207,
+      "depth": 3,
+      "section": "15.5.2",
+      "title": "401 Unauthorized",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.2",
+      "section_anchor": "section-15.5.2",
+      "name_anchor": "name-401-unauthorized"
+    },
+    {
+      "order": 208,
+      "depth": 3,
+      "section": "15.5.3",
+      "title": "402 Payment Required",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.3",
+      "section_anchor": "section-15.5.3",
+      "name_anchor": "name-402-payment-required"
+    },
+    {
+      "order": 209,
+      "depth": 3,
+      "section": "15.5.4",
+      "title": "403 Forbidden",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4",
+      "section_anchor": "section-15.5.4",
+      "name_anchor": "name-403-forbidden"
+    },
+    {
+      "order": 210,
+      "depth": 3,
+      "section": "15.5.5",
+      "title": "404 Not Found",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.5",
+      "section_anchor": "section-15.5.5",
+      "name_anchor": "name-404-not-found"
+    },
+    {
+      "order": 211,
+      "depth": 3,
+      "section": "15.5.6",
+      "title": "405 Method Not Allowed",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.6",
+      "section_anchor": "section-15.5.6",
+      "name_anchor": "name-405-method-not-allowed"
+    },
+    {
+      "order": 212,
+      "depth": 3,
+      "section": "15.5.7",
+      "title": "406 Not Acceptable",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.7",
+      "section_anchor": "section-15.5.7",
+      "name_anchor": "name-406-not-acceptable"
+    },
+    {
+      "order": 213,
+      "depth": 3,
+      "section": "15.5.8",
+      "title": "407 Proxy Authentication Required",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.8",
+      "section_anchor": "section-15.5.8",
+      "name_anchor": "name-407-proxy-authentication-re"
+    },
+    {
+      "order": 214,
+      "depth": 3,
+      "section": "15.5.9",
+      "title": "408 Request Timeout",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.9",
+      "section_anchor": "section-15.5.9",
+      "name_anchor": "name-408-request-timeout"
+    },
+    {
+      "order": 215,
+      "depth": 3,
+      "section": "15.5.10",
+      "title": "409 Conflict",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.10",
+      "section_anchor": "section-15.5.10",
+      "name_anchor": "name-409-conflict"
+    },
+    {
+      "order": 216,
+      "depth": 3,
+      "section": "15.5.11",
+      "title": "410 Gone",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.11",
+      "section_anchor": "section-15.5.11",
+      "name_anchor": "name-410-gone"
+    },
+    {
+      "order": 217,
+      "depth": 3,
+      "section": "15.5.12",
+      "title": "411 Length Required",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.12",
+      "section_anchor": "section-15.5.12",
+      "name_anchor": "name-411-length-required"
+    },
+    {
+      "order": 218,
+      "depth": 3,
+      "section": "15.5.13",
+      "title": "412 Precondition Failed",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.13",
+      "section_anchor": "section-15.5.13",
+      "name_anchor": "name-412-precondition-failed"
+    },
+    {
+      "order": 219,
+      "depth": 3,
+      "section": "15.5.14",
+      "title": "413 Content Too Large",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.14",
+      "section_anchor": "section-15.5.14",
+      "name_anchor": "name-413-content-too-large"
+    },
+    {
+      "order": 220,
+      "depth": 3,
+      "section": "15.5.15",
+      "title": "414 URI Too Long",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.15",
+      "section_anchor": "section-15.5.15",
+      "name_anchor": "name-414-uri-too-long"
+    },
+    {
+      "order": 221,
+      "depth": 3,
+      "section": "15.5.16",
+      "title": "415 Unsupported Media Type",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.16",
+      "section_anchor": "section-15.5.16",
+      "name_anchor": "name-415-unsupported-media-type"
+    },
+    {
+      "order": 222,
+      "depth": 3,
+      "section": "15.5.17",
+      "title": "416 Range Not Satisfiable",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.17",
+      "section_anchor": "section-15.5.17",
+      "name_anchor": "name-416-range-not-satisfiable"
+    },
+    {
+      "order": 223,
+      "depth": 3,
+      "section": "15.5.18",
+      "title": "417 Expectation Failed",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.18",
+      "section_anchor": "section-15.5.18",
+      "name_anchor": "name-417-expectation-failed"
+    },
+    {
+      "order": 224,
+      "depth": 3,
+      "section": "15.5.19",
+      "title": "418 (Unused)",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.19",
+      "section_anchor": "section-15.5.19",
+      "name_anchor": "name-418-unused"
+    },
+    {
+      "order": 225,
+      "depth": 3,
+      "section": "15.5.20",
+      "title": "421 Misdirected Request",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.20",
+      "section_anchor": "section-15.5.20",
+      "name_anchor": "name-421-misdirected-request"
+    },
+    {
+      "order": 226,
+      "depth": 3,
+      "section": "15.5.21",
+      "title": "422 Unprocessable Content",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.21",
+      "section_anchor": "section-15.5.21",
+      "name_anchor": "name-422-unprocessable-content"
+    },
+    {
+      "order": 227,
+      "depth": 3,
+      "section": "15.5.22",
+      "title": "426 Upgrade Required",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.22",
+      "section_anchor": "section-15.5.22",
+      "name_anchor": "name-426-upgrade-required"
+    },
+    {
+      "order": 228,
+      "depth": 2,
+      "section": "15.6",
+      "title": "Server Error 5xx",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.6",
+      "section_anchor": "section-15.6",
+      "name_anchor": "name-server-error-5xx"
+    },
+    {
+      "order": 229,
+      "depth": 3,
+      "section": "15.6.1",
+      "title": "500 Internal Server Error",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.6.1",
+      "section_anchor": "section-15.6.1",
+      "name_anchor": "name-500-internal-server-error"
+    },
+    {
+      "order": 230,
+      "depth": 3,
+      "section": "15.6.2",
+      "title": "501 Not Implemented",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.6.2",
+      "section_anchor": "section-15.6.2",
+      "name_anchor": "name-501-not-implemented"
+    },
+    {
+      "order": 231,
+      "depth": 3,
+      "section": "15.6.3",
+      "title": "502 Bad Gateway",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.6.3",
+      "section_anchor": "section-15.6.3",
+      "name_anchor": "name-502-bad-gateway"
+    },
+    {
+      "order": 232,
+      "depth": 3,
+      "section": "15.6.4",
+      "title": "503 Service Unavailable",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.6.4",
+      "section_anchor": "section-15.6.4",
+      "name_anchor": "name-503-service-unavailable"
+    },
+    {
+      "order": 233,
+      "depth": 3,
+      "section": "15.6.5",
+      "title": "504 Gateway Timeout",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.6.5",
+      "section_anchor": "section-15.6.5",
+      "name_anchor": "name-504-gateway-timeout"
+    },
+    {
+      "order": 234,
+      "depth": 3,
+      "section": "15.6.6",
+      "title": "505 HTTP Version Not Supported",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-15.6.6",
+      "section_anchor": "section-15.6.6",
+      "name_anchor": "name-505-http-version-not-suppor"
+    },
+    {
+      "order": 235,
+      "depth": 1,
+      "section": "16",
+      "title": "Extending HTTP",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16",
+      "section_anchor": "section-16",
+      "name_anchor": "name-extending-http"
+    },
+    {
+      "order": 236,
+      "depth": 2,
+      "section": "16.1",
+      "title": "Method Extensibility",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.1",
+      "section_anchor": "section-16.1",
+      "name_anchor": "name-method-extensibility"
+    },
+    {
+      "order": 237,
+      "depth": 3,
+      "section": "16.1.1",
+      "title": "Method Registry",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.1.1",
+      "section_anchor": "section-16.1.1",
+      "name_anchor": "name-method-registry"
+    },
+    {
+      "order": 238,
+      "depth": 3,
+      "section": "16.1.2",
+      "title": "Considerations for New Methods",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.1.2",
+      "section_anchor": "section-16.1.2",
+      "name_anchor": "name-considerations-for-new-meth"
+    },
+    {
+      "order": 239,
+      "depth": 2,
+      "section": "16.2",
+      "title": "Status Code Extensibility",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.2",
+      "section_anchor": "section-16.2",
+      "name_anchor": "name-status-code-extensibility"
+    },
+    {
+      "order": 240,
+      "depth": 3,
+      "section": "16.2.1",
+      "title": "Status Code Registry",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.2.1",
+      "section_anchor": "section-16.2.1",
+      "name_anchor": "name-status-code-registry"
+    },
+    {
+      "order": 241,
+      "depth": 3,
+      "section": "16.2.2",
+      "title": "Considerations for New Status Codes",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.2.2",
+      "section_anchor": "section-16.2.2",
+      "name_anchor": "name-considerations-for-new-stat"
+    },
+    {
+      "order": 242,
+      "depth": 2,
+      "section": "16.3",
+      "title": "Field Extensibility",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.3",
+      "section_anchor": "section-16.3",
+      "name_anchor": "name-field-extensibility"
+    },
+    {
+      "order": 243,
+      "depth": 3,
+      "section": "16.3.1",
+      "title": "Field Name Registry",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.3.1",
+      "section_anchor": "section-16.3.1",
+      "name_anchor": "name-field-name-registry"
+    },
+    {
+      "order": 244,
+      "depth": 3,
+      "section": "16.3.2",
+      "title": "Considerations for New Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.3.2",
+      "section_anchor": "section-16.3.2",
+      "name_anchor": "name-considerations-for-new-fiel"
+    },
+    {
+      "order": 245,
+      "depth": 4,
+      "section": "16.3.2.1",
+      "title": "Considerations for New Field Names",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.3.2.1",
+      "section_anchor": "section-16.3.2.1",
+      "name_anchor": "name-considerations-for-new-field"
+    },
+    {
+      "order": 246,
+      "depth": 4,
+      "section": "16.3.2.2",
+      "title": "Considerations for New Field Values",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.3.2.2",
+      "section_anchor": "section-16.3.2.2",
+      "name_anchor": "name-considerations-for-new-field-"
+    },
+    {
+      "order": 247,
+      "depth": 2,
+      "section": "16.4",
+      "title": "Authentication Scheme Extensibility",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.4",
+      "section_anchor": "section-16.4",
+      "name_anchor": "name-authentication-scheme-exten"
+    },
+    {
+      "order": 248,
+      "depth": 3,
+      "section": "16.4.1",
+      "title": "Authentication Scheme Registry",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.4.1",
+      "section_anchor": "section-16.4.1",
+      "name_anchor": "name-authentication-scheme-regis"
+    },
+    {
+      "order": 249,
+      "depth": 3,
+      "section": "16.4.2",
+      "title": "Considerations for New Authentication Schemes",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.4.2",
+      "section_anchor": "section-16.4.2",
+      "name_anchor": "name-considerations-for-new-auth"
+    },
+    {
+      "order": 250,
+      "depth": 2,
+      "section": "16.5",
+      "title": "Range Unit Extensibility",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.5",
+      "section_anchor": "section-16.5",
+      "name_anchor": "name-range-unit-extensibility"
+    },
+    {
+      "order": 251,
+      "depth": 3,
+      "section": "16.5.1",
+      "title": "Range Unit Registry",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.5.1",
+      "section_anchor": "section-16.5.1",
+      "name_anchor": "name-range-unit-registry"
+    },
+    {
+      "order": 252,
+      "depth": 3,
+      "section": "16.5.2",
+      "title": "Considerations for New Range Units",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.5.2",
+      "section_anchor": "section-16.5.2",
+      "name_anchor": "name-considerations-for-new-rang"
+    },
+    {
+      "order": 253,
+      "depth": 2,
+      "section": "16.6",
+      "title": "Content Coding Extensibility",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.6",
+      "section_anchor": "section-16.6",
+      "name_anchor": "name-content-coding-extensibilit"
+    },
+    {
+      "order": 254,
+      "depth": 3,
+      "section": "16.6.1",
+      "title": "Content Coding Registry",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.6.1",
+      "section_anchor": "section-16.6.1",
+      "name_anchor": "name-content-coding-registry"
+    },
+    {
+      "order": 255,
+      "depth": 3,
+      "section": "16.6.2",
+      "title": "Considerations for New Content Codings",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.6.2",
+      "section_anchor": "section-16.6.2",
+      "name_anchor": "name-considerations-for-new-cont"
+    },
+    {
+      "order": 256,
+      "depth": 2,
+      "section": "16.7",
+      "title": "Upgrade Token Registry",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-16.7",
+      "section_anchor": "section-16.7",
+      "name_anchor": "name-upgrade-token-registry"
+    },
+    {
+      "order": 257,
+      "depth": 1,
+      "section": "17",
+      "title": "Security Considerations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17",
+      "section_anchor": "section-17",
+      "name_anchor": "name-security-considerations"
+    },
+    {
+      "order": 258,
+      "depth": 2,
+      "section": "17.1",
+      "title": "Establishing Authority",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.1",
+      "section_anchor": "section-17.1",
+      "name_anchor": "name-establishing-authority"
+    },
+    {
+      "order": 259,
+      "depth": 2,
+      "section": "17.2",
+      "title": "Risks of Intermediaries",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.2",
+      "section_anchor": "section-17.2",
+      "name_anchor": "name-risks-of-intermediaries"
+    },
+    {
+      "order": 260,
+      "depth": 2,
+      "section": "17.3",
+      "title": "Attacks Based on File and Path Names",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.3",
+      "section_anchor": "section-17.3",
+      "name_anchor": "name-attacks-based-on-file-and-p"
+    },
+    {
+      "order": 261,
+      "depth": 2,
+      "section": "17.4",
+      "title": "Attacks Based on Command, Code, or Query Injection",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.4",
+      "section_anchor": "section-17.4",
+      "name_anchor": "name-attacks-based-on-command-co"
+    },
+    {
+      "order": 262,
+      "depth": 2,
+      "section": "17.5",
+      "title": "Attacks via Protocol Element Length",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.5",
+      "section_anchor": "section-17.5",
+      "name_anchor": "name-attacks-via-protocol-elemen"
+    },
+    {
+      "order": 263,
+      "depth": 2,
+      "section": "17.6",
+      "title": "Attacks Using Shared-Dictionary Compression",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.6",
+      "section_anchor": "section-17.6",
+      "name_anchor": "name-attacks-using-shared-dictio"
+    },
+    {
+      "order": 264,
+      "depth": 2,
+      "section": "17.7",
+      "title": "Disclosure of Personal Information",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.7",
+      "section_anchor": "section-17.7",
+      "name_anchor": "name-disclosure-of-personal-info"
+    },
+    {
+      "order": 265,
+      "depth": 2,
+      "section": "17.8",
+      "title": "Privacy of Server Log Information",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.8",
+      "section_anchor": "section-17.8",
+      "name_anchor": "name-privacy-of-server-log-infor"
+    },
+    {
+      "order": 266,
+      "depth": 2,
+      "section": "17.9",
+      "title": "Disclosure of Sensitive Information in URIs",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.9",
+      "section_anchor": "section-17.9",
+      "name_anchor": "name-disclosure-of-sensitive-inf"
+    },
+    {
+      "order": 267,
+      "depth": 2,
+      "section": "17.10",
+      "title": "Application Handling of Field Names",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.10",
+      "section_anchor": "section-17.10",
+      "name_anchor": "name-application-handling-of-fie"
+    },
+    {
+      "order": 268,
+      "depth": 2,
+      "section": "17.11",
+      "title": "Disclosure of Fragment after Redirects",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.11",
+      "section_anchor": "section-17.11",
+      "name_anchor": "name-disclosure-of-fragment-afte"
+    },
+    {
+      "order": 269,
+      "depth": 2,
+      "section": "17.12",
+      "title": "Disclosure of Product Information",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.12",
+      "section_anchor": "section-17.12",
+      "name_anchor": "name-disclosure-of-product-infor"
+    },
+    {
+      "order": 270,
+      "depth": 2,
+      "section": "17.13",
+      "title": "Browser Fingerprinting",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.13",
+      "section_anchor": "section-17.13",
+      "name_anchor": "name-browser-fingerprinting"
+    },
+    {
+      "order": 271,
+      "depth": 2,
+      "section": "17.14",
+      "title": "Validator Retention",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.14",
+      "section_anchor": "section-17.14",
+      "name_anchor": "name-validator-retention"
+    },
+    {
+      "order": 272,
+      "depth": 2,
+      "section": "17.15",
+      "title": "Denial-of-Service Attacks Using Range",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.15",
+      "section_anchor": "section-17.15",
+      "name_anchor": "name-denial-of-service-attacks-u"
+    },
+    {
+      "order": 273,
+      "depth": 2,
+      "section": "17.16",
+      "title": "Authentication Considerations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.16",
+      "section_anchor": "section-17.16",
+      "name_anchor": "name-authentication-consideratio"
+    },
+    {
+      "order": 274,
+      "depth": 3,
+      "section": "17.16.1",
+      "title": "Confidentiality of Credentials",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.16.1",
+      "section_anchor": "section-17.16.1",
+      "name_anchor": "name-confidentiality-of-credenti"
+    },
+    {
+      "order": 275,
+      "depth": 3,
+      "section": "17.16.2",
+      "title": "Credentials and Idle Clients",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.16.2",
+      "section_anchor": "section-17.16.2",
+      "name_anchor": "name-credentials-and-idle-client"
+    },
+    {
+      "order": 276,
+      "depth": 3,
+      "section": "17.16.3",
+      "title": "Protection Spaces",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.16.3",
+      "section_anchor": "section-17.16.3",
+      "name_anchor": "name-protection-spaces"
+    },
+    {
+      "order": 277,
+      "depth": 3,
+      "section": "17.16.4",
+      "title": "Additional Response Fields",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-17.16.4",
+      "section_anchor": "section-17.16.4",
+      "name_anchor": "name-additional-response-fields"
+    },
+    {
+      "order": 278,
+      "depth": 1,
+      "section": "18",
+      "title": "IANA Considerations",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18",
+      "section_anchor": "section-18",
+      "name_anchor": "name-iana-considerations"
+    },
+    {
+      "order": 279,
+      "depth": 2,
+      "section": "18.1",
+      "title": "URI Scheme Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.1",
+      "section_anchor": "section-18.1",
+      "name_anchor": "name-uri-scheme-registration"
+    },
+    {
+      "order": 280,
+      "depth": 2,
+      "section": "18.2",
+      "title": "Method Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.2",
+      "section_anchor": "section-18.2",
+      "name_anchor": "name-method-registration"
+    },
+    {
+      "order": 281,
+      "depth": 2,
+      "section": "18.3",
+      "title": "Status Code Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.3",
+      "section_anchor": "section-18.3",
+      "name_anchor": "name-status-code-registration"
+    },
+    {
+      "order": 282,
+      "depth": 2,
+      "section": "18.4",
+      "title": "Field Name Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.4",
+      "section_anchor": "section-18.4",
+      "name_anchor": "name-field-name-registration"
+    },
+    {
+      "order": 283,
+      "depth": 2,
+      "section": "18.5",
+      "title": "Authentication Scheme Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.5",
+      "section_anchor": "section-18.5",
+      "name_anchor": "name-authentication-scheme-regist"
+    },
+    {
+      "order": 284,
+      "depth": 2,
+      "section": "18.6",
+      "title": "Content Coding Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.6",
+      "section_anchor": "section-18.6",
+      "name_anchor": "name-content-coding-registration"
+    },
+    {
+      "order": 285,
+      "depth": 2,
+      "section": "18.7",
+      "title": "Range Unit Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.7",
+      "section_anchor": "section-18.7",
+      "name_anchor": "name-range-unit-registration"
+    },
+    {
+      "order": 286,
+      "depth": 2,
+      "section": "18.8",
+      "title": "Media Type Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.8",
+      "section_anchor": "section-18.8",
+      "name_anchor": "name-media-type-registration"
+    },
+    {
+      "order": 287,
+      "depth": 2,
+      "section": "18.9",
+      "title": "Port Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.9",
+      "section_anchor": "section-18.9",
+      "name_anchor": "name-port-registration"
+    },
+    {
+      "order": 288,
+      "depth": 2,
+      "section": "18.10",
+      "title": "Upgrade Token Registration",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-18.10",
+      "section_anchor": "section-18.10",
+      "name_anchor": "name-upgrade-token-registration"
+    },
+    {
+      "order": 289,
+      "depth": 1,
+      "section": "19",
+      "title": "References",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-19",
+      "section_anchor": "section-19",
+      "name_anchor": "name-references"
+    },
+    {
+      "order": 290,
+      "depth": 2,
+      "section": "19.1",
+      "title": "Normative References",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-19.1",
+      "section_anchor": "section-19.1",
+      "name_anchor": "name-normative-references"
+    },
+    {
+      "order": 291,
+      "depth": 2,
+      "section": "19.2",
+      "title": "Informative References",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#section-19.2",
+      "section_anchor": "section-19.2",
+      "name_anchor": "name-informative-references"
+    },
+    {
+      "order": 292,
+      "depth": 1,
+      "section": "Appendix A",
+      "title": "Collected ABNF",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-A",
+      "section_anchor": "appendix-A",
+      "name_anchor": "name-collected-abnf"
+    },
+    {
+      "order": 293,
+      "depth": 1,
+      "section": "Appendix B",
+      "title": "Changes from Previous RFCs",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B",
+      "section_anchor": "appendix-B",
+      "name_anchor": "name-changes-from-previous-rfcs"
+    },
+    {
+      "order": 294,
+      "depth": 2,
+      "section": "B.1",
+      "title": "Changes from RFC 2818",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.1",
+      "section_anchor": "appendix-B.1",
+      "name_anchor": "name-changes-from-rfc-2818"
+    },
+    {
+      "order": 295,
+      "depth": 2,
+      "section": "B.2",
+      "title": "Changes from RFC 7230",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.2",
+      "section_anchor": "appendix-B.2",
+      "name_anchor": "name-changes-from-rfc-7230"
+    },
+    {
+      "order": 296,
+      "depth": 2,
+      "section": "B.3",
+      "title": "Changes from RFC 7231",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.3",
+      "section_anchor": "appendix-B.3",
+      "name_anchor": "name-changes-from-rfc-7231"
+    },
+    {
+      "order": 297,
+      "depth": 2,
+      "section": "B.4",
+      "title": "Changes from RFC 7232",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.4",
+      "section_anchor": "appendix-B.4",
+      "name_anchor": "name-changes-from-rfc-7232"
+    },
+    {
+      "order": 298,
+      "depth": 2,
+      "section": "B.5",
+      "title": "Changes from RFC 7233",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.5",
+      "section_anchor": "appendix-B.5",
+      "name_anchor": "name-changes-from-rfc-7233"
+    },
+    {
+      "order": 299,
+      "depth": 2,
+      "section": "B.6",
+      "title": "Changes from RFC 7235",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.6",
+      "section_anchor": "appendix-B.6",
+      "name_anchor": "name-changes-from-rfc-7235"
+    },
+    {
+      "order": 300,
+      "depth": 2,
+      "section": "B.7",
+      "title": "Changes from RFC 7538",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.7",
+      "section_anchor": "appendix-B.7",
+      "name_anchor": "name-changes-from-rfc-7538"
+    },
+    {
+      "order": 301,
+      "depth": 2,
+      "section": "B.8",
+      "title": "Changes from RFC 7615",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.8",
+      "section_anchor": "appendix-B.8",
+      "name_anchor": "name-changes-from-rfc-7615"
+    },
+    {
+      "order": 302,
+      "depth": 2,
+      "section": "B.9",
+      "title": "Changes from RFC 7694",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-B.9",
+      "section_anchor": "appendix-B.9",
+      "name_anchor": "name-changes-from-rfc-7694"
+    },
+    {
+      "order": 303,
+      "depth": 1,
+      "section": "Appendix C",
+      "title": "Acknowledgements",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-C",
+      "section_anchor": "appendix-C",
+      "name_anchor": "name-acknowledgements"
+    },
+    {
+      "order": 304,
+      "depth": 1,
+      "section": "Appendix D",
+      "title": "Index",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-D",
+      "section_anchor": "appendix-D",
+      "name_anchor": "name-index"
+    },
+    {
+      "order": 305,
+      "depth": 1,
+      "section": "Appendix E",
+      "title": "Authors' Addresses",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9110#appendix-E",
+      "section_anchor": "appendix-E",
+      "name_anchor": "name-authors-addresses"
+    }
+  ]
+}

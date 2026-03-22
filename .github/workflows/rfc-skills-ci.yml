@@ -1,0 +1,43 @@
+name: RFC Skill CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/rfc/**'
+      - 'tools/rfc-skills/**'
+      - '.github/workflows/rfc-skills-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'skills/rfc/**'
+      - 'tools/rfc-skills/**'
+      - '.github/workflows/rfc-skills-ci.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Python deps
+        run: python3 -m pip install --upgrade pip pyyaml
+      - name: Validate RFC skill files
+        run: python3 tools/rfc-skills/quick_validate.py skills/rfc
+      - name: Validate RFC TOC references
+        run: |
+          python3 - <<'PY'
+          import json
+          paths = [
+              'skills/rfc/references/rfc-9110-toc.json',
+              'skills/rfc/references/rfc-9700-toc.json',
+          ]
+          for path in paths:
+              with open(path, encoding='utf-8') as f:
+                  data = json.load(f)
+              if 'entries' not in data or not isinstance(data['entries'], list) or not data['entries']:
+                  raise SystemExit(f'Invalid TOC entries in {path}')
+          print('RFC TOC references validated')
+          PY

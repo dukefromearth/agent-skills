@@ -8,6 +8,12 @@ A collection of AI-agent skills with deterministic build tooling and CI validati
 
 Dependency and architecture graph generation playbook for TypeScript repositories. Use this when implementing or upgrading `npm run arch` style workflows with `dependency-cruiser`, `ts-morph`, and `fast-glob`.
 
+### rfc
+
+Unified RFC section-mapping skill for implementation and QA citation work across:
+- RFC 9110 HTTP Semantics
+- RFC 9700 OAuth 2.0 Security BCP
+
 ## Repository Architecture
 
 - `skills/<skill>/` - skill source and generated outputs
